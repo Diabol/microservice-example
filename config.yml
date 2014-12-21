@@ -2,3 +2,7 @@ defaultName: Marcus
 
 server:
   type: simple
+  applicationContextPath: /app
+  adminContextPath: /admin
+  connector:
+    type: http
