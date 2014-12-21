@@ -14,8 +14,6 @@ public class ServiceConfiguration extends Configuration {
     @NotEmpty
     private String defaultName = "Stranger";
 
-    //private SimpleServerFactory server = new SimpleServerFactory();
-
     @JsonProperty
     public String getTemplate() {
         return template;
@@ -35,13 +33,4 @@ public class ServiceConfiguration extends Configuration {
     public void setDefaultName(String name) {
         this.defaultName = name;
     }
-
-//    public SimpleServerFactory getServer() {
-//        return server;
-//    }
-//
-//    public void setServer(SimpleServerFactory server) {
-//        this.server = server;
-//    }
-
 }
