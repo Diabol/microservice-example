@@ -7,8 +7,8 @@ import io.dropwizard.setup.Environment;
 public class ServiceApplication extends Application<ServiceConfiguration> {
 
     public static void main(String[] args) throws Exception {
-            new ServiceApplication().run(args);
-        }
+        new ServiceApplication().run(args);
+    }
 
 
     @Override
@@ -21,7 +21,7 @@ public class ServiceApplication extends Application<ServiceConfiguration> {
         final HelloWorldResource resource = new HelloWorldResource(
                 configuration.getTemplate(),
                 configuration.getDefaultName()
-            );
-            environment.jersey().register(resource);
+                );
+        environment.jersey().register(resource);
     }
 }
