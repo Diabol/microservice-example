@@ -18,6 +18,12 @@
             <artifactId>dropwizard-core</artifactId>
             <version>${dropwizard.version}</version>
         </dependency>
+        <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.7</version>
+          <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
