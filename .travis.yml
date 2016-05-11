@@ -6,8 +6,6 @@ env:
 jdk:
 - oraclejdk7
 script:
-  mvn install
+  env
 after_success:
-  - echo $JENKINSCI_USERNAME
-  - echo $JENKINSCI_PASSWORD
-  - mvn deploy --settings settings.xml -DskipTests=true -B
+  - "[[ $TRAVIS_BRANCH == \"master\" && $TRAVIS_PULL_REQUEST == \"false\" ]] && { echo \"$TRAVIS_BRANCH $JENKINSCI_USERNAME  $JENKINSCI_PASSWORD\"; mvn deploy --settings settings.xml; };"
