@@ -2,7 +2,7 @@ language: java
 env:
   global:
     - JENKINSCI_USERNAME=kallekula
-    - secure: "your encrypted JENKINSCI_PASSWORD=password"
+    - secure: "V3nNF5p8ycitAxu49T0TTY19r5URcYZAxc/dcJmiDOlmPA1ftX8igCpi6FJRjwWe9PvaOsOTp8zoBqekqs6++wHmOws67uisy9fED13IBDuOIXzT9SoTU1SpDN22iUrhrf7BWB2kxuFtUn5PJUw+dl3Qrpcb+4reOs35h9K+oxE="
 jdk:
 - oraclejdk7
 script:
