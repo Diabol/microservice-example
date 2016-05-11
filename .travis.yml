@@ -6,6 +6,6 @@ env:
 jdk:
 - oraclejdk7
 script:
-  echo "skipping actual build... for this test"
+  env
 after_success:
   - "[[ $TRAVIS_BRANCH == \"master\" ]] && { echo \"$TRAVIS_BRANCH $JENKINSCI_USERNAME  $JENKINSCI_PASSWORD\"; mvn deploy --settings settings.xml; };"
