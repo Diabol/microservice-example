@@ -8,4 +8,4 @@ jdk:
 script:
   echo "skipping actual build... for this test"
 after_success:
-  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { echo $JENKINSCI_USERNAME; echo $JENKINSCI_PASSWORD; mvn deploy --settings settings.xml; };"
+  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { echo \"$JENKINSCI_USERNAME  $JENKINSCI_PASSWORD\"; mvn deploy --settings settings.xml; };"
