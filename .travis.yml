@@ -6,8 +6,7 @@ env:
 jdk:
 - oraclejdk7
 script:
-  mvn install
+  echo "skipping actual build... for this test"
 after_success:
   - echo $JENKINSCI_USERNAME
   - echo $JENKINSCI_PASSWORD
-  - mvn deploy --settings settings.xml -DskipTests=true -B
