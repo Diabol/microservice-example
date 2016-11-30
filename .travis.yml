@@ -8,4 +8,4 @@ jdk:
 script:
   env
 after_success:
-  - "[[ $TRAVIS_BRANCH == \"master\" && $TRAVIS_PULL_REQUEST == \"false\" ]] && { echo \"$TRAVIS_BRANCH $JENKINSCI_USERNAME  $JENKINSCI_PASSWORD\"; mvn deploy --settings settings.xml; };"
+  - echo $JENKINS_USERNAME
