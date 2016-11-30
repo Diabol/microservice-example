@@ -3,6 +3,7 @@ microservice-example
 
 The build.sh does a mvn clean install and also builds the diabol/slim:ms1 docker image.
 
+
 To run the image, do
 
 ```
