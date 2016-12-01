@@ -8,4 +8,4 @@ jdk:
 script:
   env
 after_success:
-  - echo $JENKINS_USERNAME
+  - "[[ -n $TRAVIS_TAG ]] && { ./release.sh };"
