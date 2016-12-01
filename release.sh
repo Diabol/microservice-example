@@ -2,9 +2,11 @@
 set -e
 set -x
 echo "Running release script..."
+git checkout master
 echo "another line..." >> dummy.txt
 git config user.name "travis"
 git config user.email "travis@diabol.se"
+git config --global push.default simple
 remote=`git config remote.origin.url | sed -n 's/https:\/\/github.com\/\(.*\)/git@github.com:\1/p'`
 git remote set-url origin $remote
 ENCRYPTED_KEY="\$encrypted_${ENCRYPTION_LABEL}_key"
