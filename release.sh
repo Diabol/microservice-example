@@ -1,4 +1,6 @@
 #!/bin/sh
+set -e
+set -x
 echo "Running release script..."
 echo "another line..." >> dummy.txt
 git config user.name "travis"
