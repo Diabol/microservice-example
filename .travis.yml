@@ -8,4 +8,4 @@ jdk:
 script:
   env
 after_success:
-  - "[[ -n $TRAVIS_TAG ]] && { ./release.sh };"
+  - "if [[ -n $TRAVIS_TAG ]]; then ./release.sh; fi"
