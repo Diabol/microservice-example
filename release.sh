@@ -5,7 +5,7 @@ echo "Running release script..."
 echo "another line..." >> dummy.txt
 git config user.name "travis"
 git config user.email "travis@diabol.se"
-remote=`git config remote.origin.url | sed -n 's/https:\/\/\(.*\)/git@\1/p'`
+remote=`git config remote.origin.url | sed -n 's/https:\/\/github.com\/\(.*\)/git@github.com:\1/p'`
 git remote set-url origin $remote
 ENCRYPTED_KEY="\$encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV="\$encrypted_${ENCRYPTION_LABEL}_iv"
