@@ -17,9 +17,9 @@ remote=`git config remote.origin.url | sed -n 's/https:\/\/github.com\/\(.*\)/gi
 git remote remove origin
 git remote add origin $remote
 git fetch
+git checkout master
 
 # do a change
-git checkout origin/master
 echo "another line..." >> dummy.txt
 git add dummy.txt
 git commit -m "added line to dummy.txt"
